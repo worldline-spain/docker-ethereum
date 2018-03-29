@@ -4,7 +4,8 @@
 #  tty: true
 
 gethconsole:
-  image: kunstmaan/ethereum-geth-console
+#  image: kunstmaan/ethereum-geth-console
+  build: ./geth-console
   stdin_open: true
   tty: true
   links:
@@ -12,12 +13,14 @@ gethconsole:
     - testnet
 
 testnet:
-  image: kunstmaan/ethereum-geth-testnet
+#  image: kunstmaan/ethereum-geth-testnet
+  build: ./geth-testnet
   stdin_open: true
   tty: true
 
 devnet:
-  image: kunstmaan/ethereum-geth-devnet
+  #image: kunstmaan/ethereum-geth-devnet
+  build: ./geth-devnet
   stdin_open: true
   tty: true
   expose:
